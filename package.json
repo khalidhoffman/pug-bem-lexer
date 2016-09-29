@@ -1,0 +1,26 @@
+{
+  "name": "bem-pug-lexer",
+  "version": "0.0.1",
+  "description": "Adds bem shortcuts to pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalidhoffman/bem-pug-lexer.git"
+  },
+  "keywords": [
+    "pugjs",
+    "pug",
+    "BEM",
+    "pug-lexer",
+    "plugin"
+  ],
+  "author": "Khalid Hoffman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khalidhoffman/bem-pug-lexer/issues"
+  },
+  "homepage": "https://github.com/khalidhoffman/bem-pug-lexer#readme"
+}
