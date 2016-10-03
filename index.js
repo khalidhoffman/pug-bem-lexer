@@ -10,9 +10,9 @@ module.exports = function () {
                 if(currentToken.val.match(/^[a-zA-Z]/) && !(currentBEMBlock && currentBEMBlock.line == currentToken.line)){
                     this.bemBlocks.push(currentToken);
                 } else if (currentBEMBlock && currentToken.val.match(/^\-/)){
-                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\-/, currentBEMBlock.val + '--');
+                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\-\-?/, currentBEMBlock.val + '--');
                 } else if(currentBEMBlock && currentToken.val.match(/^\_/)){
-                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\_/, currentBEMBlock.val + '__');
+                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\_\_?/, currentBEMBlock.val + '__');
                 }
                 break;
             case 'outdent':
