@@ -1,22 +1,23 @@
 module.exports = function () {
     this.bemBlocks = this.bemBlocks || [];
-    var bemBlockIndex= this.bemBlocks.length - 1,
-        currentBemBlock = this.bemBlocks[bemBlockIndex],
-        lastTokenIndex = this.tokens.length - 1,
-        lastToken= this.tokens[lastTokenIndex];
-    if (lastToken) {
-        switch(lastToken.type){
+    var currentBEMBlockIndex= this.bemBlocks.length - 1,
+        currentBEMBlock = this.bemBlocks[currentBEMBlockIndex],
+        currentTokenIndex = this.tokens.length - 1,
+        currentToken= this.tokens[currentTokenIndex];
+    if (currentToken) {
+        switch(currentToken.type){
             case 'class':
-                if(lastToken.val.match(/^[a-zA-Z]/) && !(currentBemBlock && currentBemBlock.line == lastToken.line)){
-                    this.bemBlocks.push(lastToken);
-                } else if (currentBemBlock && lastToken.val.match(/^\-/)){
-                    this.tokens[lastTokenIndex].val = lastToken.val.replace(/^\-/, currentBemBlock.val + '--');
-                } else if(currentBemBlock && lastToken.val.match(/^\_/)){
-                    this.tokens[lastTokenIndex].val = lastToken.val.replace(/^\_/, currentBemBlock.val + '__');
+                if(currentToken.val.match(/^[a-zA-Z]/) && !(currentBEMBlock && currentBEMBlock.line == currentToken.line)){
+                    this.bemBlocks.push(currentToken);
+                } else if (currentBEMBlock && currentToken.val.match(/^\-/)){
+                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\-/, currentBEMBlock.val + '--');
+                } else if(currentBEMBlock && currentToken.val.match(/^\_/)){
+                    this.tokens[currentTokenIndex].val = currentToken.val.replace(/^\_/, currentBEMBlock.val + '__');
                 }
                 break;
             case 'outdent':
-                if(currentBemBlock && this.colno <= currentBemBlock.col) {
+            case 'newline':
+                if(currentBEMBlock && this.colno <= currentBEMBlock.col) {
                     this.bemBlocks.pop();
                 }
                 break;
