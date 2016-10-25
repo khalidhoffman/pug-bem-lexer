@@ -1,4 +1,4 @@
-# bem-pug-lexer
+# pug-bem-lexer
 A plugin that adds BEM shortcuts to pug
 
 ## Installation
