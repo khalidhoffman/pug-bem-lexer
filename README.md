@@ -2,14 +2,14 @@
 A plugin that adds BEM shortcuts to pug
 
 ## Installation
-run `npm i bem-pug-lexer`
+run `npm i pug-bem-lexer`
 
 ## Setup
 ```
 pug.render(somePugString, {
   plugins : [
     {
-        lex : require('bem-pug-lexer')
+        lex : require('pug-bem-lexer')
     }
   ]
 });
