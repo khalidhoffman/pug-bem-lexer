@@ -2,7 +2,7 @@
 A plugin that adds BEM shortcuts to pug
 
 ## Installation
-run `npm i bem-pug-lexer`'
+run `npm i bem-pug-lexer`
 
 ## Setup
 ```
