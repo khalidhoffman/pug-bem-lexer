@@ -8,7 +8,9 @@ run `npm i bem-pug-lexer`'
 ```
 pug.render(somePugString, {
   plugins : [
-    lex : require('bem-pug-lexer')
+    {
+        lex : require('bem-pug-lexer')
+    }
   ]
 });
 ```
