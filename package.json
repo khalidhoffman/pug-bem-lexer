@@ -1,6 +1,6 @@
 {
   "name": "pug-bem-lexer",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Adds bem shortcuts to pug",
   "main": "index.js",
   "scripts": {
