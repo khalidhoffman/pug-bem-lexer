@@ -1,6 +1,6 @@
 # pug-bem-lexer
 A plugin that adds BEM shortcuts to pug
-
+# This repo has been deprecated in favor of [pug-bemify](https://github.com/khalidhoffman/pug-bemify)
 ## Installation
 run `npm i pug-bem-lexer`
 
